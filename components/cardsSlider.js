@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {Navigation} from "swiper";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const CardsSlider = () => {
   const [selectedTab, setSelectedTab] = useState("1");
@@ -148,68 +148,6 @@ const CardsSlider = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-      {/* <div className="content-tab-items">
-        <div className="content-tab-item">
-          <img src="./images/dwqwqd.png" alt="image" />
-          <div className="layout-data ">
-            <div className="layout-data-head">
-              <div></div>
-              <span>أفكار البزنس</span>
-            </div>
-            <h3 className="header2">ما هو مستقبل التجارة الإلكترونية</h3>
-            <p>
-              من المتوقع أن تزيد المبيعات من 3.1 تريليون في عام4102 إلى 5.4
-              تريليون في عام 1202
-            </p>
-            <span>بواسطة عبدالله عادل</span>
-          </div>
-        </div>
-        <div className="content-tab-item">
-          <img src="./images/Rectangle 326 (4).png" alt="image" />
-          <div className="layout-data ">
-            <div className="layout-data-head">
-              <div></div>
-              <span>أفكار البزنس</span>
-            </div>
-            <h3 className="header2">ما هو مستقبل التجارة الإلكترونية</h3>
-            <p>
-              من المتوقع أن تزيد المبيعات من 3.1 تريليون في عام4102 إلى 5.4
-              تريليون في عام 1202
-            </p>
-            <span>بواسطة عبدالله عادل</span>
-          </div>
-        </div>
-        <div className="content-tab-item">
-          <img src="./images/Rectangle 326 (5).png" alt="image" />
-          <div className="layout-data ">
-            <div className="layout-data-head">
-              <div></div>
-              <span>أفكار البزنس</span>
-            </div>
-            <h3 className="header2">ما هو مستقبل التجارة الإلكترونية</h3>
-            <p>
-              من المتوقع أن تزيد المبيعات من 3.1 تريليون في عام4102 إلى 5.4
-              تريليون في عام 1202
-            </p>
-            <span>بواسطة عبدالله عادل</span>
-          </div>
-        </div>
-        <div className="content-tab-item">
-          <img src="./images/Rectangle 326 (3).png" alt="image" />
-          <div className="layout-data ">
-            <div className="layout-data-head">
-              <div></div>
-              <span>أفكار البزنس</span>
-            </div>
-            <h3 className="header2">ما هو مستقبل التجارة الإلكترونية</h3>
-            <p>
-              من المتوقع أن تزيد المبيعات من 3.1 تريليون في عام4102 إلى 5.4
-              تريليون في عام 1202
-            </p>
-            <span>بواسطة عبدالله عادل</span>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };
