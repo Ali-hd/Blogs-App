@@ -1,15 +1,10 @@
-import Carousel from "../components/carousel";
-import CardsSlider from "../components/CardsSlider";
+import Carousel from "../Carousel";
+import CardsSlider from "../CardsSlider";
 import { home } from "../utils/data";
-import Head from 'next/head';
 
 const HomePage = () => {
   return (
     <div className="home-wrap">
-      <Head>
-        <title>مدونه | الرئيسية</title>
-        <meta property="og:title" content="الرئيسية"/>
-      </Head>
       <Carousel />
       <div className="home-content">
         <div className="most-read-container">
@@ -83,20 +78,20 @@ const HomePage = () => {
         <CardsSlider />
         <div className="content-layout2">
           <div className="layout2-right-container">
-            {home.secondLayout.rightSide.map((ele,i)=>{
-              return(
+            {home.secondLayout.rightSide.map((ele, i) => {
+              return (
                 <div key={i} className="layout-data-item">
-                <div className="layout-data no-padding">
-                  <div className="layout-data-head">
-                    <div></div>
-                    <span>{ele.type}</span>
+                  <div className="layout-data no-padding">
+                    <div className="layout-data-head">
+                      <div></div>
+                      <span>{ele.type}</span>
+                    </div>
+                    <h3>{ele.title}</h3>
+                    <p>{ele.content}</p>
+                    <span>{ele.author}</span>
                   </div>
-                  <h3>{ele.title}</h3>
-                  <p>{ele.content}</p>
-                  <span>{ele.author}</span>
                 </div>
-              </div>
-              )
+              );
             })}
           </div>
           <div className="layout2-left-container">

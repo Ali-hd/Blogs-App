@@ -1,0 +1,5 @@
+export default {
+    SET_STATE: 'SET_STATE',
+    GET_COMMENTS: 'GET_COMMENTS',
+    POST_COMMENT: 'POST_COMMENT'
+}
