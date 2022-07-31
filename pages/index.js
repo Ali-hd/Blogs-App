@@ -1,5 +1,5 @@
 import Carousel from "../components/carousel";
-import CardsSlider from "../components/CardsSlider";
+import CardsSlider from "../components/cardsSlider";
 import { home } from "../utils/data";
 import Head from 'next/head';
 

@@ -1,5 +1,5 @@
-import Carousel from "../Carousel";
-import CardsSlider from "../CardsSlider";
+import Carousel from "../carousel";
+import CardsSlider from "../cardsSlider";
 import { home } from "../utils/data";
 
 const HomePage = () => {
