@@ -14,5 +14,11 @@ const env = {
   measurementId: "G-07FPQRPG0R",
 };
 
-
-module.exports = { nextConfig, env };
+module.exports = {
+  nextConfig,
+  env,
+  i18n: {
+    locales: ["ar"],
+    defaultLocale: "ar",
+  },
+};
