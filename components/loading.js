@@ -1,7 +1,8 @@
-const Loading = () => {
+const Loading = (props) => {
+  const {style, spinnerSize} = props
   return (
-    <div className="spinner-container">
-      <div className="loading-spinner"></div>
+    <div style={style} className="spinner-container">
+      <div style={{'width': spinnerSize, 'height': spinnerSize}} className="loading-spinner"></div>
     </div>
   );
 };

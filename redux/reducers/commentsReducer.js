@@ -9,7 +9,6 @@ const initialState = {
 export const commentReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case actionTypes.SET_STATE:
-      console.log('redux reducers running, payload:',payload)
       return { ...state, ...payload };
     case actionTypes.GET_COMMENTS:
       return { ...state, comments: payload, status: "idle" };

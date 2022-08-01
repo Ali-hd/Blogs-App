@@ -107,6 +107,10 @@
     text-align: right;
     color: #000000;
   }
+
+  .comment-form{
+    position: relative;
+  }
   
   .comment-form form {
     display: flex;
@@ -187,6 +191,7 @@
     border-radius: 3px;
     outline: none;
     max-width: 242px;
+    min-width: 189px;
     height: 42px;
     border: 2px solid #5DD5C4;
     font-weight: 400;
@@ -211,4 +216,25 @@
     color: #ff4d4f;
     margin-top: -10px;
     margin-bottom: 10px;
+  }
+
+  @media screen and (max-width: 1050px) {
+    .blog-comments-section{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .comment-form{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+
+  @media screen and (max-width: 620px) {
+    .comment-user-container{
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
   }

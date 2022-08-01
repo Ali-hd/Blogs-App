@@ -80,7 +80,7 @@ const HomePage = () => {
             <span>{home.heighlight.author}</span>
           </div>
         </div>
-        <CardsSlider />
+        <CardsSlider cards={home.cards} />
         <div className="content-layout2">
           <div className="layout2-right-container">
             {home.secondLayout.rightSide.map((ele,i)=>{

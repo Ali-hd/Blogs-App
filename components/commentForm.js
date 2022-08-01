@@ -29,7 +29,7 @@ const CommentForm = () => {
     const checkErrors = validateCommentForm(payload, []);
 
     setErrors(checkErrors);
-    if (checkErrors.length < 1) {
+    if (checkErrors.length < 1 && status != "loading") {
       dispatch(submitComment(payload));
       commentFormRef.current.reset();
     }
@@ -38,10 +38,10 @@ const CommentForm = () => {
   return (
     <>
       {status == "loading" ? (
-        <Loading />
+        <Loading spinnerSize={25} />
       ) : comments.length > 0 ? (
         <section className="blog-comments-section">
-          <div key={21243} className="blog-comments-header">
+          <div className="blog-comments-header">
             <h2>التعليقات ( {comments.length} )</h2>
             <div></div>
           </div>
@@ -143,9 +143,18 @@ const CommentForm = () => {
                   : null
               }
             >
-              <input type="submit" value="أضف تعليقك" />
+              <input
+                type="submit"
+                value={status == "submittingComment" ? " " : "أضف تعليقك"}
+              />
             </div>
           </form>
+          {status == "submittingComment" ? (
+            <Loading
+              style={{ position: "absolute", right: "80px", bottom: "7px" }}
+              spinnerSize={19}
+            />
+          ) : null}
         </div>
       </div>
     </>
@@ -153,3 +162,8 @@ const CommentForm = () => {
 };
 
 export default CommentForm;
+
+// position: absolute;
+// right: 80px;
+// bottom: 5px;
+// }

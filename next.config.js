@@ -14,4 +14,5 @@ const env = {
   measurementId: "G-07FPQRPG0R",
 };
 
+
 module.exports = { nextConfig, env };

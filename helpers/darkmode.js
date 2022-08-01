@@ -1,11 +1,4 @@
-import dynamic from "next/dynamic";
 const darkReaderOptions = { brightness: 100, contrast: 90, sepia: 10 };
-
-// import {
-//   enable as enableDarkMode,
-//   disable as disableDarkMode,
-//   isEnabled as isDarkReaderEnabled,
-// } from "darkreader";
 
 const handleDarkMode = async (mode, callback) => {
   if (typeof window != "undefined") {
@@ -33,14 +26,3 @@ const handleDarkMode = async (mode, callback) => {
 };
 
 export default handleDarkMode;
-
-// export async function toggleDarkMode() {
-//   if (typeof window != "undefined") {
-//     const { isEnabled, enable, disable, setFetchMethod } = await import(
-//       "darkreader"
-//     );
-//     setFetchMethod(window.fetch);
-//     const isOn = isEnabled();
-//     isOn ? disable() : enable(darkReaderOptions);
-//   }
-// }

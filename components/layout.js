@@ -6,7 +6,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Head>
-        <meta charset="UTF-8"/>
+        <meta charSet="UTF-8"/>
         <meta
           name="description"
           content="خطوات عملية حول كيفية بيع المنتجات عبر الانترنت"

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import {Navigation} from "swiper";
+import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const CardsSlider = () => {
+const CardsSlider = (props) => {
   const [selectedTab, setSelectedTab] = useState("1");
+  const {cards} = props
 
   const handleTabSelect = (tab) => {
     setSelectedTab(tab);
@@ -60,6 +61,7 @@ const CardsSlider = () => {
     <div className="content-tabs-container">
       <TabsHeader />
       <Swiper
+        // dir="rtl"
         modules={[Navigation]}
         initialSlide={4} //last slide on page
         slidesPerView={4}
@@ -69,88 +71,37 @@ const CardsSlider = () => {
         grabCursor={true}
         className="cards-swiper"
         navigation={{
-          nextEl: '.card-nextel',
-          prevEl: '.card-prevel'
+          nextEl: ".card-nextel",
+          prevEl: ".card-prevel",
         }}
         breakpoints={{
+          // when window is >= 910
           0: { slidesPerView: 1 },
           600: { slidesPerView: 2 },
-                  // when window is >= 910
           910: { slidesPerView: 3 },
         }}
       >
-        <SwiperSlide className="cards-slider">
-          <div className="content-tab-item">
-            <img src="./images/dwqwqd.png" alt="image" />
-            <div className="layout-data ">
-              <div className="layout-data-head">
-                <div></div>
-                <span>أفكار البزنس</span>
+        {cards.map(ele=>{
+          return(
+            <SwiperSlide key={ele.id} className="cards-slider">
+            <div className="content-tab-item">
+              <img src={ele.image} alt="image" />
+              <div className="layout-data ">
+                <div className="layout-data-head">
+                  <div></div>
+                  <span>{ele.type}</span>
+                </div>
+                <h3 className="header2">{ele.title}</h3>
+                <p>{ele.content}</p>
+                <span>بواسطة {ele.author}</span>
               </div>
-              <h3 className="header2">ما هو مستقبل التجارة الإلكترونية</h3>
-              <p>
-                من المتوقع أن تزيد المبيعات من 3.1 تريليون في عام4102 إلى 5.4
-                تريليون في عام 1202
-              </p>
-              <span>بواسطة عبدالله عادل</span>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="cards-slider">
-          <div className="content-tab-item">
-            <img src="./images/dwqwqd.png" alt="image" />
-            <div className="layout-data ">
-              <div className="layout-data-head">
-                <div></div>
-                <span>أفكار البزنس</span>
-              </div>
-              <h3 className="header2">ما هو مستقبل التجارة الإلكترونية</h3>
-              <p>
-                من المتوقع أن تزيد المبيعات من 3.1 تريليون في عام4102 إلى 5.4
-                تريليون في عام 1202
-              </p>
-              <span>بواسطة عبدالله عادل</span>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="cards-slider">
-          <div className="content-tab-item">
-            <img src="./images/dwqwqd.png" alt="image" />
-            <div className="layout-data ">
-              <div className="layout-data-head">
-                <div></div>
-                <span>أفكار البزنس</span>
-              </div>
-              <h3 className="header2">ما هو مستقبل التجارة الإلكترونية</h3>
-              <p>
-                من المتوقع أن تزيد المبيعات من 3.1 تريليون في عام4102 إلى 5.4
-                تريليون في عام 1202
-              </p>
-              <span>بواسطة عبدالله عادل</span>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="cards-slider">
-          <div className="content-tab-item">
-            <img src="./images/dwqwqd.png" alt="image" />
-            <div className="layout-data ">
-              <div className="layout-data-head">
-                <div></div>
-                <span>أفكار البزنس</span>
-              </div>
-              <h3 className="header2">ما هو مستقبل التجارة الإلكترونية</h3>
-              <p>
-                من المتوقع أن تزيد المبيعات من 3.1 تريليون في عام4102 إلى 5.4
-                تريليون في عام 1202
-              </p>
-              <span>بواسطة عبدالله عادل</span>
-            </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
+          )
+        })}
       </Swiper>
     </div>
   );
 };
 
 export default CardsSlider;
-

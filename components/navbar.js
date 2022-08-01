@@ -7,6 +7,7 @@ import { useRouter } from 'next/router'
 
 function NavBar() {
   const dispatch = useDispatch();
+  const router = useRouter()
   const [navIsOpen, setNavIsOpen] = useState(false);
   const { darkmode } = useSelector((state) => state.commentReducer);
 
@@ -20,6 +21,12 @@ function NavBar() {
 
   useEffect(() => {
     handleDarkMode(localStorage.getItem("theme"), updateDarkMode);
+
+    const handleRouteChange = (url, { shallow }) => {
+     setNavIsOpen(false)
+    }
+
+    router.events.on('routeChangeStart', handleRouteChange)
   }, []);
 
   return (
@@ -56,7 +63,7 @@ function NavBar() {
                   : "nav-item"
               }
             >
-              <Link href="/blogs">التقارير والدراسات</Link>
+              <Link prefetch={false} href="/blogs">التقارير والدراسات</Link>
             </div>
             <div
               className={
