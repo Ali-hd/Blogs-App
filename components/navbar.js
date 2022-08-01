@@ -20,7 +20,7 @@ function NavBar() {
   };
 
   useEffect(() => {
-    handleDarkMode(localStorage.getItem("theme"), updateDarkMode);
+    handleDarkMode(localStorage.getItem("theme"), updateDarkMode, true);
 
     const handleRouteChange = (url, { shallow }) => {
      setNavIsOpen(false)
@@ -85,7 +85,7 @@ function NavBar() {
               />
             </div>
             <div
-              onClick={() => handleDarkMode(false, updateDarkMode)}
+              onClick={() => handleDarkMode(false, updateDarkMode, false)}
               className="navbar-function-item"
             >
               <img

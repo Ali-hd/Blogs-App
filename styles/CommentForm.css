@@ -5,6 +5,7 @@
     padding: 0px;
     gap: 20px;
     max-width: 1050px;
+    width: 100%;
   }
   
   .blog-comments-header {
@@ -222,6 +223,7 @@
     .blog-comments-section{
       padding-left: 15px;
       padding-right: 15px;
+      width: 95%;
     }
 
     .comment-form{

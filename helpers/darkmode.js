@@ -1,6 +1,6 @@
 const darkReaderOptions = { brightness: 100, contrast: 90, sepia: 10 };
 
-const handleDarkMode = async (mode, callback) => {
+const handleDarkMode = async (mode, callback, onload) => {
   if (typeof window != "undefined") {
     //next js fix for darkmode
     const { isEnabled, enable, disable, setFetchMethod } = await import(
@@ -10,7 +10,7 @@ const handleDarkMode = async (mode, callback) => {
     if (mode == "dark") {
       enable(darkReaderOptions);
       callback(true);
-    } else if (!mode) {
+    } else if (!mode && !onload) {
       const enabled = isEnabled();
       if (enabled) {
         disable();
