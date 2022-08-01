@@ -1,6 +1,6 @@
 ## Blog | مدونة
 ### Site deployed below
-[Live Link]('https://madona.netlify.app')
+[Live Link](https://madona.netlify.app)
 
 ## Technologies used
 - Reactjs
