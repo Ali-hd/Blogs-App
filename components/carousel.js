@@ -8,13 +8,13 @@ const Carousel = () => {
         navigation={true}
         pagination={true}
         modules={[Navigation, Pagination]}
-        className="carousel-swiper w-full h-full max-w-[1599px] max-h-[513px] min-h-[265px]"
+        className="w-full h-full max-w-[1599px] max-h-[513px] min-h-[265px]"
       >
         <SwiperSlide className="carousel-slide text-center text-[18px] bg-white">
           <div className="relative">
             <img
               className="w-full h-full block object-cover brightness-[50%] mwsm2:h-[265px]"
-              src="./images/diverse-people-working-office 1.png"
+              src="./images/diverse-people-working-office 1.jpg"
               alt="silder_image"
             />
             <div className="flex flex-col gap-[15px] max-w-[815px] absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] mwsm3:max-w-[500px] mwsm3:w-full mwsm3:py-[10px] mwsm3:px-[30px] mwxsm:gap-[10px] mwxsm:py-[10px] mwxsm:px-4">
@@ -31,7 +31,7 @@ const Carousel = () => {
           <div className="relative">
             <img
               className="w-full h-full block object-cover brightness-[50%] mwsm2:h-[265px]"
-              src="./images/diverse-people-working-office 1.png"
+              src="./images/diverse-people-working-office 1.jpg"
               alt="silder_image"
             />
             <div className="flex flex-col gap-[15px] max-w-[815px] absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] mwsm3:max-w-[500px] mwsm3:w-full mwsm3:py-[10px] mwsm3:px-[30px] mwxsm:gap-[10px] mwxsm:py-[10px] mwxsm:px-4">
@@ -48,7 +48,7 @@ const Carousel = () => {
           <div className="relative">
             <img
               className="w-full h-full block object-cover brightness-[50%] mwsm2:h-[265px]"
-              src="./images/diverse-people-working-office 1.png"
+              src="./images/diverse-people-working-office 1.jpg"
               alt="silder_image"
             />
             <div className="flex flex-col gap-[15px] max-w-[815px] absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] mwsm3:max-w-[500px] mwsm3:w-full mwsm3:py-[10px] mwsm3:px-[30px] mwxsm:gap-[10px] mwxsm:py-[10px] mwxsm:px-4">
@@ -65,7 +65,7 @@ const Carousel = () => {
           <div className="relative">
             <img
               className="w-full h-full block object-cover brightness-[50%] mwsm2:h-[265px]"
-              src="./images/diverse-people-working-office 1.png"
+              src="./images/diverse-people-working-office 1.jpg"
               alt="silder_image"
             />
             <div className="flex flex-col gap-[15px] max-w-[815px] absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] mwsm3:max-w-[500px] mwsm3:w-full mwsm3:py-[10px] mwsm3:px-[30px] mwxsm:gap-[10px] mwxsm:py-[10px] mwxsm:px-4">

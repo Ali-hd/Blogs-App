@@ -19,7 +19,7 @@ export default function Layout({ children }) {
         <meta property="og:site_name" content=" مدونه | Blog " />
         <meta property="og:locale" content="ar_AR" />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="./images/highlight.png" />
+        <meta property="og:image" content="./images/highlight.jpg" />
       </Head>
       <NavBar />
       <main>{children}</main>
