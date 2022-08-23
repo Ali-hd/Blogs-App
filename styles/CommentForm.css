@@ -1,4 +1,4 @@
-.blog-comments-section {
+/* .blog-comments-section {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -78,9 +78,9 @@
   .comment-date span {
     font-size: 14px;
     line-height: 21px;
-  }
+  } */
   
-  .comment-form-wrap {
+  /* .comment-form-wrap {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -107,9 +107,9 @@
     line-height: 30px;
     text-align: right;
     color: #000000;
-  }
+  } */
 
-  .comment-form{
+  /* .comment-form{
     position: relative;
   }
   
@@ -123,9 +123,9 @@
     font-size: 14px;
     line-height: 21px;
     color: #202221;
-  }
+  } */
   
-  .comment-input-container {
+  /* .comment-input-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -133,23 +133,23 @@
     height: 155px;
     text-align: right;
   }
-  
-  .comment-input-container textarea {
+   */
+  /* .comment-input-container textarea {
     direction: rtl;
     padding: 12px;
     border: 1px solid #e9e9e9;
     border-radius: 3px;
     outline: none;
-  }
+  } */
   
-  .comment-input-container textarea::placeholder {
+  /* .comment-input-container textarea::placeholder {
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
     color: #b3b9b9;
-  }
+  } */
   
-  .comment-user-container {
+  /* .comment-user-container {
     display: flex;
     flex-direction: row-reverse;
     gap: 15px;
@@ -178,9 +178,9 @@
     font-size: 12px;
     line-height: 18px;
     color: #b3b9b9;
-  }
+  } */
   
-  .comment-submit-btn{
+  /* .comment-submit-btn{
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
@@ -217,9 +217,9 @@
     color: #ff4d4f;
     margin-top: -10px;
     margin-bottom: 10px;
-  }
+  } */
 
-  @media screen and (max-width: 1050px) {
+  /* @media screen and (max-width: 1050px) {
     .blog-comments-section{
       padding-left: 15px;
       padding-right: 15px;
@@ -239,4 +239,4 @@
       align-items: center;
       height: auto;
     }
-  }
+  } */

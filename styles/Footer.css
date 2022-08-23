@@ -1,4 +1,4 @@
-.optin-container{
+/* .optin-container{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,7 +17,6 @@
     gap: 8px;
     margin-bottom: 7px;
     flex: none;
-    order: 0;
     flex-grow: 0;
 }
 
@@ -123,7 +122,6 @@ footer{
     gap: 25px;
     width: 100%;
     max-width: 1170px;
-    /* height: 42px; */
     text-align: center;
     flex-wrap: wrap;
 }
@@ -150,14 +148,10 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 5px 34px; */
     gap: 10px;
 
     width: 141px;
     height: 42px;
-
-    /* Brand Colors/Secondary/500 Base */
-
     background: #FF9F4B;
     border-radius: 3px;
     cursor: pointer;
@@ -176,8 +170,6 @@ footer{
 
     border: 1px solid #E9E9E9;
     transform: rotate(90deg);
-
-    /* Inside auto layout */
 
     flex: none;
     order: 1;
@@ -213,15 +205,15 @@ footer{
     border: 1px solid #ECEEED;
     border-radius: 30px;
     cursor: pointer;
-}
+} */
 
-.social-icon{
+/* .social-icon{
     width: 16px;
     height: 16px;
     color: #404343;
-}
+} */
 
-@media screen and (max-width: 810px){
+/* @media screen and (max-width: 810px){
 
     .footer-content{
         justify-content: center;
@@ -236,9 +228,9 @@ footer{
         order: 2;
     }
 
-}
+} */
 
-@media screen and (max-width: 700px) {
+/* @media screen and (max-width: 700px) {
 
     .optin-container{
         margin-top: 40px;
@@ -261,9 +253,9 @@ line-height: 27px;
         width: 100%;
     }
 
-}
+} */
 
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
 
     .email-input-container{
         display: flex;
@@ -279,4 +271,4 @@ line-height: 27px;
         height: 21px;
     }
     
-}
+} */

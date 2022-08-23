@@ -10,46 +10,48 @@ const CardsSlider = (props) => {
     setSelectedTab(tab);
   };
 
+  const tabTitleClass = "relative text-right font-normal text-[22px] leading-[30px] text-[#a0a4a4] flex flex-col items-center transition duration-500	ease after:opacity-0 after:content-[' '] after:border-2 after:border-solid after:border-[#5dd5c4] after:rounded after:w-[90%] after:bottom-[-13px] after:absolute after:transition after:duration-200 after:ease-in-out after:scale-x-0 hover:after:opacity-100 hover:after:opacity-100 hover:after:scale-x-100 mwxsm:text-[18px] mwxsm:leading-[27px]"
+
   const TabsHeader = () => {
     return (
-      <div className="content-tabs-header">
-        <div className="content-tabs">
+      <div className="flex flex-row-reverse justify-between h-15">
+        <div className="flex flex-row-reverse items-center gap-[30px]">
           <div
             onClick={() => handleTabSelect("1")}
             className={
               selectedTab == "1"
-                ? "content-tab-title active-tab"
-                : "content-tab-title"
+                ? `${tabTitleClass} text-[#202221] after:opacity-100 after:content-[' '] after:border-solid after:border-2 after:border-[#5dd5c4] after:rounded after:w-[90%] after:bottom-[-13px] after:absolute after:transition after:duration-200 after:ease-in-out after:scale-x-100`
+                : `${tabTitleClass}`
             }
           >
-            <a>الاكثر مشاهدة</a>
+            <a className="hover:text-[#202221]">الاكثر مشاهدة</a>
           </div>
           <div
             onClick={() => handleTabSelect("2")}
             className={
               selectedTab == "2"
-                ? "content-tab-title active-tab"
-                : "content-tab-title"
+                ? `${tabTitleClass} text-[#202221] after:opacity-100 after:content-[' '] after:border-solid after:border-2 after:border-[#5dd5c4] after:rounded after:w-[90%] after:bottom-[-13px] after:absolute after:transition after:duration-200 after:ease-in-out after:scale-x-100`
+                : `${tabTitleClass}`
             }
           >
-            <a>الاكثر شهرة</a>
+            <a className="hover:text-[#202221]">الاكثر شهرة</a>
           </div>
           <div
             onClick={() => handleTabSelect("3")}
             className={
               selectedTab == "3"
-                ? "content-tab-title active-tab"
-                : "content-tab-title"
+                ? `${tabTitleClass} text-[#202221] after:opacity-100 after:content-[' '] after:border-solid after:border-2 after:border-[#5dd5c4] after:rounded after:w-[90%] after:bottom-[-13px] after:absolute after:transition after:duration-200 after:ease-in-out after:scale-x-100`
+                : `${tabTitleClass}`
             }
           >
-            <a>الاكثر قراءة</a>
+            <a className="hover:text-[#202221]">الاكثر قراءة</a>
           </div>
         </div>
-        <div className="content-tabs-controls">
-          <div className="card-nextel">
+        <div className="flex flex-row-reverse gap-6 items-center mwxsm:hidden">
+          <div className="card-nextel flex items-center justify-center cursor-pointer w-6 h-6">
             <img src="./icons/right_arrow2.svg" alt="right" />
           </div>
-          <div className="card-prevel">
+          <div className="card-prevel flex items-center justify-center cursor-pointer w-6 h-6">
             <img src="./icons/left_arrow2.svg" alt="left" />
           </div>
         </div>
@@ -58,7 +60,7 @@ const CardsSlider = (props) => {
   };
 
   return (
-    <div className="content-tabs-container">
+    <div className="flex flex-col gap-4 px-3.5">
       <TabsHeader />
       <Swiper
         // dir="rtl"
@@ -69,7 +71,7 @@ const CardsSlider = (props) => {
         centeredSlides={false}
         fadeEffect={true}
         grabCursor={true}
-        className="cards-swiper"
+        className="w-full h-full max-w-[1170px] max-h-[442px] flex flex-row-reverse !mr-0 mwsm:w-[330px] sm:w-[600px] md:w-[910px]"
         navigation={{
           nextEl: ".card-nextel",
           prevEl: ".card-prevel",
@@ -83,17 +85,17 @@ const CardsSlider = (props) => {
       >
         {cards.map(ele=>{
           return(
-            <SwiperSlide key={ele.id} className="cards-slider">
-            <div className="content-tab-item">
-              <img src={ele.image} alt="image" />
-              <div className="layout-data ">
-                <div className="layout-data-head">
-                  <div></div>
-                  <span>{ele.type}</span>
+            <SwiperSlide key={ele.id} className="cards-slider flex justify-end">
+            <div className="flex flex-col w-[270px]">
+              <img className="rounded-t-[3px] w-full h-[230px]" src={ele.image} alt="card-img"/>
+              <div className="layout-data flex flex-col p-[18px] gap-3">
+                <div className="layout-data-head flex flex-row-reverse gap-2">
+                  <div className="w-[2px] h-[19px] bg-brand"></div>
+                  <span className="font-normal text-sm leading-[21px] text-right text-[#404343]">{ele.type}</span>
                 </div>
-                <h3 className="header2">{ele.title}</h3>
-                <p>{ele.content}</p>
-                <span>بواسطة {ele.author}</span>
+                <h3 className="font-normal text-lg leading-[26px] text-right text-[#212121]">{ele.title}</h3>
+                <p className="font-normal text-base text-right text-[#808686]">{ele.content}</p>
+                <span className="font-normal text-sm leading-[21px] text-right text-[#404343]">بواسطة {ele.author}</span>
               </div>
             </div>
           </SwiperSlide>
